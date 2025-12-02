@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="polyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#81aa4c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#eaeaea" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#525352" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#525352" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#eaeaea"/>
+  <!-- Mixed geometric shapes: hexagons, pentagons -->
+  <!-- Hexagon functionally: center (x,y), radius r -->
+  <polygon points="260,200 330,240 330,320 260,360 190,320 190,240" fill="url(#polyGrad)" opacity="0.85"/>
+  <polygon points="560,280 630,320 630,400 560,440 490,400 490,320" fill="#81aa4c" opacity="0.5"/>
+  <polygon points="920,200 990,240 990,320 920,360 850,320 850,240" fill="#525352" opacity="0.14"/>
+
+  <!-- Pentagons -->
+  <polygon points="1300,220 1350,260 1330,320 1270,320 1250,260" fill="#81aa4c" opacity="0.45"/>
+  <polygon points="1580,300 1630,340 1610,400 1550,400 1530,340" fill="url(#polyGrad)" opacity="0.75"/>
+
+  <!-- Lower shapes -->
+  <polygon points="340,760 410,800 390,860 330,860 310,800" fill="#81aa4c" opacity="0.35"/>
+  <polygon points="720,740 790,780 790,860 720,900 650,860 650,780" fill="#525352" opacity="0.12"/>
+  <polygon points="1120,760 1190,800 1170,860 1110,860 1090,800" fill="#81aa4c" opacity="0.4"/>
+  <polygon points="1520,740 1590,780 1590,860 1520,900 1450,860 1450,780" fill="url(#polyGrad)" opacity="0.7"/>
+
+  <rect width="1920" height="1080" fill="url(#overlay)"/>
+</svg>

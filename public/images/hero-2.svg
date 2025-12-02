@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="triGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#81aa4c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#eaeaea" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#525352" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#525352" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#eaeaea"/>
+  <!-- Angular triangular mosaic -->
+  <polygon points="0,0 480,0 240,320" fill="url(#triGrad)" opacity="0.85"/>
+  <polygon points="480,0 960,0 720,340" fill="#81aa4c" opacity="0.55"/>
+  <polygon points="960,0 1440,0 1200,300" fill="#525352" opacity="0.15"/>
+  <polygon points="1440,0 1920,0 1680,340" fill="#81aa4c" opacity="0.45"/>
+
+  <polygon points="0,540 320,260 640,540" fill="#81aa4c" opacity="0.35"/>
+  <polygon points="320,260 640,540 960,260" fill="url(#triGrad)" opacity="0.75"/>
+  <polygon points="640,540 960,260 1280,540" fill="#525352" opacity="0.12"/>
+  <polygon points="960,260 1280,540 1600,260" fill="#81aa4c" opacity="0.35"/>
+  <polygon points="1280,540 1600,260 1920,540" fill="url(#triGrad)" opacity="0.7"/>
+
+  <polygon points="0,1080 480,760 960,1080" fill="#81aa4c" opacity="0.4"/>
+  <polygon points="480,760 960,1080 1440,760" fill="#525352" opacity="0.12"/>
+  <polygon points="960,1080 1440,760 1920,1080" fill="#81aa4c" opacity="0.3"/>
+
+  <rect width="1920" height="1080" fill="url(#overlay)"/>
+</svg>

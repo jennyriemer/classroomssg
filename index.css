@@ -1,0 +1,77 @@
+/* Project overrides (kept minimal since Tailwind via CDN is used) */
+
+/* Ensure the header maintains good text contrast over images */
+.header-shadow-glow { text-shadow: 0 2px 14px rgba(0,0,0,0.25); }
+
+/* Optional: smooth font rendering */
+html, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; }
+
+/* Modal animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.overlay-fade { animation: fadeIn 220ms ease-out; }
+
+@keyframes zoomIn { from { opacity: 0; transform: translateY(8px) scale(0.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.panel-zoom { animation: zoomIn 260ms ease-out; }
+
+/* Reveal on scroll base */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease, filter .6s ease; filter: blur(3px); will-change: transform, opacity; }
+.reveal.is-visible { opacity: 1; transform: none; filter: blur(0); }
+.reveal-up { opacity: 0; transform: translateY(24px); }
+.reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-24px); }
+.reveal-left.is-visible { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(24px); }
+.reveal-right.is-visible { opacity: 1; transform: translateX(0); }
+.reveal-rotate { opacity: 0; transform: translateY(16px) rotate(-2deg); }
+.reveal-rotate.is-visible { opacity: 1; transform: none; }
+
+/* Hero on-load animations */
+.anim-fade-scale { opacity: 0; transform: scale(.96); animation: heroFadeScale .6s ease-out forwards; animation-delay: .3s; }
+@keyframes heroFadeScale { to { opacity: 1; transform: scale(1); } }
+.anim-slide-up { opacity: 0; transform: translateY(20px); animation: slideUp .6s ease-out forwards; }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+.delay-300 { animation-delay: .6s; }
+.delay-600 { animation-delay: .9s; }
+
+/* Scroll indicator */
+.scroll-indicator { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); width: 22px; height: 36px; border: 2px solid rgba(255,255,255,.8); border-radius: 14px; display: flex; align-items: flex-start; justify-content: center; }
+.scroll-indicator::after { content: ''; width: 4px; height: 8px; background: rgba(255,255,255,.9); border-radius: 2px; margin-top: 6px; animation: bounceScroll 1.2s ease-in-out infinite; }
+@keyframes bounceScroll { 0%,100% { transform: translateY(0); opacity: .8; } 50% { transform: translateY(8px); opacity: 1; } }
+
+/* Top progress bar */
+#scroll-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0; background: #81aa4c; z-index: 1000; transition: width .15s linear; }
+
+/* Hover micro-interactions */
+.card-hover { transition: transform .3s ease, box-shadow .3s ease; }
+.card-hover:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 14px 30px rgba(0,0,0,.15); }
+.img-zoom { transition: transform .7s ease; }
+.group:hover .img-zoom { transform: scale(1.05); }
+@keyframes wiggle { 0%,100%{ transform: rotate(0); } 25%{ transform: rotate(1.4deg);} 75%{ transform: rotate(-1.4deg);} }
+.group:hover .price-wiggle { animation: wiggle .45s ease; }
+
+/* Ripple effect */
+.btn-ripple { position: relative; overflow: hidden; }
+.btn-ripple::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 60%); transform: scale(0); opacity: 0; transition: transform .4s ease, opacity .6s ease; }
+.btn-ripple:active::after { transform: scale(2.2); opacity: 1; transition: none; }
+
+/* Footer social bounce */
+.icon-bounce:hover { transform: translateY(-2px); }
+
+/* Floating shapes near headings */
+.heading-float { position: relative; }
+.heading-float::after { content: ''; position: absolute; left: calc(100% + 12px); top: 50%; width: 14px; height: 14px; background: rgba(129,170,76,0.12); border-radius: 9999px; transform: translateY(-50%); animation: floaty 6s ease-in-out infinite; }
+@keyframes floaty { 0%,100%{ transform: translate(4px,-50%); } 50%{ transform: translate(-2px,-60%); } }
+
+/* Parallax helper */
+.hero-parallax img { will-change: transform; }
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-rotate,
+  .anim-fade-scale, .anim-slide-up, .delay-300, .delay-600,
+  .scroll-indicator::after, .card-hover, .img-zoom, .price-wiggle { animation: none !important; transition: none !important; }
+}
+
+/* Small responsive nits */
+@media (max-width: 640px) { .modal-pad { padding: 12px; } }

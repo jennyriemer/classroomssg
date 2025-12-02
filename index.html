@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scottish Stained Glass Classes</title>
+    <meta name="description" content="Master the art of stained glass with expert instruction in Colorado." />
+    
+    <!-- Google Fonts: Source Serif 4 (Successor to Source Serif Pro) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Source Serif 4"', 'serif'],
+              sans: ['"Source Serif 4"', 'serif'], // Overriding sans to enforce the serif aesthetic requested as primary
+            },
+            colors: {
+              brand: {
+                green: '#81aa4c',
+                dark: '#525352',
+                light: '#eaeaea',
+                offwhite: '#f9f9f9',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-light text-brand-dark font-serif antialiased">
+    <div id="scroll-progress"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+  <script>
+    // Scroll progress bar
+    (function(){
+      const bar = document.getElementById('scroll-progress');
+      if(!bar) return;
+      const onScroll = () => {
+        const h = document.documentElement;
+        const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+        bar.style.width = Math.max(0, Math.min(1, scrolled)) * 100 + '%';
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Intersection Observer reveals
+    (function(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const els = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-rotate');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach((e)=>{
+          if(e.isIntersecting){ e.target.classList.add('is-visible'); } else { e.target.classList.remove('is-visible'); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+      els.forEach(el=>io.observe(el));
+    })();
+  </script>
+</body>
+</html>
