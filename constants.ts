@@ -176,7 +176,7 @@ export const COMING_SOON_CLASSES: ComingSoonClass[] = [
       'Design and create your own family crest or heraldic design using either copper foil or lead came techniques. Perfect for intermediate students ready to tackle meaningful, personalized projects.',
     duration: '4-week course',
     technique: 'Foil or Lead (student choice)',
-    image: '/images/1.jpg'
+    image: '/images/family.png'
   },
   {
     id: 'jewelry-box',
