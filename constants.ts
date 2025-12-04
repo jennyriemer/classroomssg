@@ -209,6 +209,6 @@ export const COMING_SOON_CLASSES: ComingSoonClass[] = [
       'Master advanced glass painting techniques including tracing, matting, staining, and enameling. Create museum-quality painted glass panels with depth, dimension, and artistic sophistication.',
     duration: '4-week course',
     technique: 'Advanced painting & multiple firings',
-    image: '/images/suncatcher-2.jpg'
+    image: '/images/ad.png'
   }
 ];
