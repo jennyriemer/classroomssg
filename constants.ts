@@ -125,7 +125,7 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
     faqs: [
       { q: 'Do I need any prior experience?', a: 'Yes, this is an intermediate-level course. Students should have completed an introductory foiling class or have basic copper foil experience.' }
     ],
-    schedule: 'Every Wednesday for 4 weeks from 5–9 PM starting Jan 15, 2025',
+    schedule: 'Every Wednesday for 4 weeks from 5–9 PM starting Feb 18, 2026',
     availability: { type: 'dates', datesISO: ['2026-02-18'] },
     timeSlots: ['5:00 PM - 9:00 PM'],
     paymentLinkUrl: 'https://buy.stripe.com/4gM5kv9eS8om62G0rJgfu04'
