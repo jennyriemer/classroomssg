@@ -181,13 +181,13 @@ export const COMING_SOON_CLASSES: ComingSoonClass[] = [
   {
     id: 'jewelry-box',
     slug: 'jewelry-box',
-    title: 'Advanced Artistry - Family Tree Jewelry Box',
+    title: 'Advanced Artistry - Jewelry Box',
     badge: 'Coming Soon - Spring 2026',
     description:
-      'Create an heirloom-quality jewelry box featuring a stained glass family tree design on the lid. Combine woodworking with advanced glass techniques to craft a treasured keepsake.',
+      'Create an heirloom‑quality jewelry box with a custom stained glass lid. Combine woodworking with advanced glass techniques to craft a timeless keepsake.',
     duration: '6-week course',
     technique: 'Advanced foil with mixed media',
-    image: '/images/2.jpg'
+    image: '/images/jewelry.jpg'
   },
   {
     id: 'intro-painting',
