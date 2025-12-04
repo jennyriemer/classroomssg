@@ -159,7 +159,7 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
     faqs: [
       { q: 'Do I need any prior experience?', a: 'Yes, this is an intermediate-level course. Students should have completed an introductory leaded glass class or have basic lead came experience.' }
     ],
-    schedule: 'Every Tuesday for 4 weeks from 5–9 PM starting Jan 14, 2025',
+    schedule: 'Every Tuesday for 4 weeks from 5–9 PM starting Feb 17, 2026',
     availability: { type: 'dates', datesISO: ['2026-02-17'] },
     timeSlots: ['5:00 PM - 9:00 PM'],
     paymentLinkUrl: 'https://buy.stripe.com/4gMaEP62G6ge4YC2zRgfu05'
