@@ -198,7 +198,7 @@ export const COMING_SOON_CLASSES: ComingSoonClass[] = [
       'Discover the art of painting on glass with traditional kiln-fired techniques. Learn to add details, shading, and artistic elements to your stained glass pieces using specialized glass paints and firing methods.',
     duration: 'Single 4-hour session',
     technique: 'Painting & firing',
-    image: '/images/3.jpg'
+    image: '/images/paint.png'
   },
   {
     id: 'advanced-painting',
