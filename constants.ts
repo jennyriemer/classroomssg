@@ -6,7 +6,7 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
     title: 'Introduction to Stained Glass - Suncatcher Class',
     image: '/images/suncatcher-1.jpg',
     duration: '4-hour single session',
-    schedule: 'Every Saturday starting Jan 4, 2025',
+    schedule: 'Every other Saturday starting Jan 17, 2026',
     description:
       'Perfect for beginners. Learn the copper foil method while creating a beautiful light-catching piece.',
     originalPrice: 195,
@@ -47,8 +47,8 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
       { q: 'What will I take home?', a: "You'll take home your completed stained glass suncatcher (6-8 inches) and the skills to continue your craft." },
       { q: 'Is parking available?', a: 'Yes, free parking is available at our Centennial studio location.' }
     ],
-    availability: { type: 'weekly', weekday: 6, startISO: '2025-01-04', intervalWeeks: 1 },
-    timeSlots: ['9:00 AM - 1:00 PM', '1:30 PM - 5:30 PM'],
+    availability: { type: 'weekly', weekday: 6, startISO: '2026-01-17', intervalWeeks: 2 },
+    timeSlots: ['10:00 AM - 2:00 PM'],
     stripePriceId: 'price_REPLACE_WITH_YOUR_SUNCATCHER_PRICE_ID',
     paymentLinkUrl: 'https://buy.stripe.com/5kQeV5dv87ki0Imeizgfu02'
   },
@@ -61,7 +61,7 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
     courseStructure: [
       'Single 4-hour session'
     ],
-    schedule: 'Every Saturday starting Jan 11, 2025 (alternating)',
+    schedule: 'Every other Saturday starting Jan 24, 2026',
     description: 'Dive into traditional techniques used in cathedral windows and historic homes.',
     originalPrice: 225,
     discountPrice: 175,
@@ -92,8 +92,8 @@ export const CLASS_OFFERINGS: ClassOffering[] = [
       { q: 'Do I need any prior experience?', a: 'No prior experience required, but comfort with hand tools is helpful.' },
       { q: 'What will I take home?', a: 'A leaded glass geometric panel and knowledge of traditional techniques.' }
     ],
-    availability: { type: 'weekly', weekday: 6, startISO: '2025-01-11', intervalWeeks: 1 },
-    timeSlots: ['9:00 AM - 1:00 PM'],
+    availability: { type: 'weekly', weekday: 6, startISO: '2026-01-24', intervalWeeks: 2 },
+    timeSlots: ['10:00 AM - 2:00 PM'],
     paymentLinkUrl: 'https://buy.stripe.com/6oU3cn76K1ZY62G0rJgfu03'
   },
   {

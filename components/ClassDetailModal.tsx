@@ -160,7 +160,7 @@ const ClassDetailModal: React.FC<ClassDetailModalProps> = ({ open, offering, onC
             <BookingCalendar
               availability={availability}
               timeSlots={timeSlots}
-              initialYear={2025}
+              initialYear={2026}
               initialMonth={0}
               onSelect={(iso) => setSelectedDateISO(iso)}
             />
