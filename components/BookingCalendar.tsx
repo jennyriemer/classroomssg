@@ -56,12 +56,15 @@ function isAvailable(date: Date, rule?: AvailabilityRule): boolean {
     const iso = formatISO(date);
     return rule.datesISO.includes(iso);
   }
-  // weekly rule
-  const start = new Date(rule.startISO + 'T00:00:00');
-  if (date < start) return false;
-  if (date.getDay() !== rule.weekday) return false;
-  const msPerWeek = 7 * 24 * 60 * 60 * 1000;
-  const diffWeeks = Math.floor((date.getTime() - start.getTime()) / msPerWeek);
+  // weekly rule – compute using UTC midnight to avoid DST/timezone drift
+  const startLocal = new Date(rule.startISO + 'T00:00:00');
+  // normalize to UTC midnight for both dates
+  const startUTC = Date.UTC(startLocal.getFullYear(), startLocal.getMonth(), startLocal.getDate());
+  const dateUTC = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+  if (dateUTC < startUTC) return false;
+  if (date.getDay() !== rule.weekday) return false; // still compare local weekday for user-friendly grid
+  const diffDays = Math.floor((dateUTC - startUTC) / (24 * 60 * 60 * 1000));
+  const diffWeeks = Math.floor(diffDays / 7);
   const interval = rule.intervalWeeks ?? 1;
   return diffWeeks % interval === 0;
 }
